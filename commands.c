@@ -157,7 +157,7 @@ int cmd_ls(const char* image_path){
     SuperBlock sb;
     fread(&sb, sizeof(SuperBlock), 1, image);
     if(memcmp(sb.sign, FS_SIGN, FS_SIGN_SIZE)!=0){
-        fprintf(stderr, "ERROR: invalid filesystem image");
+        fprintf(stderr, "ERROR: invalid filesystem image\n");
         fclose(image);
         return -1;
     }
@@ -186,7 +186,7 @@ int cmd_rm(const char* image_path, const char* filename){
     SuperBlock sb;
     fread(&sb, sizeof(SuperBlock), 1, image);
     if(memcmp(sb.sign, FS_SIGN, FS_SIGN_SIZE)!=0){
-        fprintf(stderr, "ERROR: invalid filesystem image");
+        fprintf(stderr, "ERROR: invalid filesystem image\n");
         fclose(image);
         return -1;
     }
