@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 #define FS_SIGN "VFS512"
-#define FS_SIGN_SIZE 6 // < 7 иначе выравние нужно пересчитать
+#define FS_SIGN_SIZE 6 // < 8 иначе выравние нужно пересчитать
 #define FS_FILENAME_MAX_SIZE 32
 #define FS_FAT_CAPACITY 512
 #define FS_SUPERBLOCK_SIZE 512
